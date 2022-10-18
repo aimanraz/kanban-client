@@ -99,7 +99,7 @@ function Board (props){
     <DragDropContext onDragEnd={onDragEnd}>
         <Droppable droppableId="all-columns" direction="horizontal" type="column">
             {provided => (
-            <section className="m-10 flex" {...provided.droppableProps} ref={provided.innerRef}>
+            <section className="mx-auto my-10 w-10/12 flex" {...provided.droppableProps} ref={provided.innerRef}>
                 {board.columnOrder.map((columnId, index) => {
                     const column = board.columns[columnId];
                     const tasks = column.taskIds.map(taskIds => board.tasks[taskIds]);

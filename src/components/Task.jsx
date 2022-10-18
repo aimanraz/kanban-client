@@ -31,10 +31,10 @@ function Task (props){
     return (
         <Draggable  draggableId={props.task.id} index={props.index}>
             {provided => (
-            <div className=" border rounded-sm p-2 mb-2 bg-slate-200" {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
-                {
-                    props.task.content
-                } 
+            <div className=" border dark:border-slate-700 rounded-md p-2 mb-2 bg-slate-200 dark:bg-slate-600 text-slate-700 dark:text-white" {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
+                <p className="font-small">
+                    {props.task.content}
+                </p>
             </div>
             )}
         </Draggable>

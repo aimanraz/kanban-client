@@ -30,9 +30,9 @@ function Column (props){
     return (
         <Draggable draggableId={props.column.id} index={props.index}>
             { provided => (
-            <div className="border-2 border-slate-500 m-2 rounded-sm w-52 flex flex-col text-center p-2 relative" {...provided.dragHandleProps} {...provided.draggableProps} ref={provided.innerRef}>
-                <h1 className=" mt-5 mb-5 font-bold">{props.column.title}</h1>
-                <button className=" absolute right-2 top-2 text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 rounded text-sm px-2 pb-1 text-center"
+            <div className="border-2 border-slate-300 dark:border-slate-700 dark:bg-slate-800 m-2 rounded-xl w-52 flex flex-col text-center p-2 relative" {...provided.dragHandleProps} {...provided.draggableProps} ref={provided.innerRef}>
+                <h1 className=" mt-5 mb-5 font-bold dark:text-cyan-400">{props.column.title}</h1>
+                <button className=" absolute right-2 top-2 text-white bg-red-500 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 rounded text-sm px-2 pb-1 text-center"
                 onClick={() => deleteColumn(props.column.id, props.index)}>x</button>
                 <Droppable droppableId={props.column.id} type='task'>
                     { provided => (

@@ -1,8 +1,8 @@
 export const board_data = {
     tasks: {
-        task1: {id: 'task1', content: 'generate list of emails'},
-        task2: {id: 'task2', content: 'data need to be persist'},
-        task3: {id: 'task3', content: 'add counter'},
+        task1: {id: 'task1', content: 'Hold the Column or task to drag in between them'},
+        task2: {id: 'task2', content: 'Press + on empty column to add new Column'},
+        task3: {id: 'task3', content: 'Press + inside column to add task'},
         task4: {id: 'task4', content: 'cloud migration'}
     },
     columns: {

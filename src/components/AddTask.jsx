@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { MdAddCircle } from 'react-icons/md'
 function AddTask(props){
     const [newTaskButton, setNewTaskButton] = useState(true);
     const [value, setValue] = useState('');
@@ -46,11 +46,14 @@ function AddTask(props){
 
     return (
         <div>
-            {newTaskButton ? <button className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded-full"
+            {
+            newTaskButton ? <button
             onClick={() => setNewTaskButton(false)}>
-                Add task
-            </button>: <input className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" 
-                        type="text" value={value} onChange={handleChange} onBlur={handleInputChange}/>}
+                <MdAddCircle className=" text-4xl text-blue-500 hover:text-blue-800 dark:text-gray-500 dark:hover:text-cyan-500"/>
+            </button>: 
+            <input className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" 
+                        type="text" value={value} onChange={handleChange} onBlur={handleInputChange}/>
+            }
         </div>
     )
 }
