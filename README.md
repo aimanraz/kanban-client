@@ -1,3 +1,3 @@
-# Kanban Board Web App
+# Kanban Board
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Build a simple kanban board with react and tailwind css.
