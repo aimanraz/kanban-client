@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MdAddCircle } from 'react-icons/md'
+import { MdOutlineAddBox } from 'react-icons/md'
 function AddTask(props){
     const [newTaskButton, setNewTaskButton] = useState(true);
     const [value, setValue] = useState('');
@@ -49,7 +49,7 @@ function AddTask(props){
             {
             newTaskButton ? <button
             onClick={() => setNewTaskButton(false)}>
-                <MdAddCircle className=" text-4xl text-blue-500 hover:text-blue-800 dark:text-gray-500 dark:hover:text-cyan-500"/>
+                <MdOutlineAddBox className="text-4xl transition-colors hover:delay-75 text-blue-500 hover:text-blue-700 dark:text-gray-500 dark:hover:text-cyan-500"/>
             </button>: 
             <input className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5" 
                         type="text" value={value} onChange={handleChange} onBlur={handleInputChange}/>
