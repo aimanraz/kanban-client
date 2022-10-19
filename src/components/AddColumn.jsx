@@ -12,9 +12,14 @@ function AddColumn(props) {
     };
 
     function handleInputChange(){
-        setNewColButton(true);
-        addNewColumn(value);
-        setValue('');
+        if (value){
+            setNewColButton(true);
+            addNewColumn(value);
+            setValue('');
+        } else {
+            setNewColButton(true);
+        }
+
     };
 
     function addNewColumn(title){
