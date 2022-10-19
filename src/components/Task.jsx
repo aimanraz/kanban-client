@@ -1,3 +1,4 @@
+
 import { Draggable } from "react-beautiful-dnd";
 
 function Task (props){
@@ -31,7 +32,8 @@ function Task (props){
     return (
         <Draggable  draggableId={props.task.id} index={props.index}>
             {provided => (
-            <div className=" border dark:border-slate-700 rounded-md p-2 mb-2 bg-slate-200 dark:bg-slate-600 text-slate-700 dark:text-white" {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
+            <div className=" border dark:border-slate-700 rounded-md p-2 mb-2 bg-slate-200 dark:bg-slate-600 text-slate-700 dark:text-white"
+            onDoubleClick={() => deleteTask(props.columnId, props.index, props.task.id)} {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
                 <p className="font-small">
                     {props.task.content}
                 </p>

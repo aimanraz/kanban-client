@@ -1,15 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Header from './Header';
 import Board from "./Board";
 import Footer from "./Footer";
 
 function App (){
     const [darkMode, setDarkMode] = useState(false);
-
-    useEffect(() => {
-        console.log(darkMode);
-    }, [darkMode])
-    
 
     return (
         <div className={darkMode ? "dark": ""}>
